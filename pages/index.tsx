@@ -44,7 +44,7 @@ export default function Home() {
 
         <div>
           <Image
-            src="/images/teeth.png"
+            src="/image/securityImage.png"
             alt="Picture of the author"
             width={500}
             height={500}
