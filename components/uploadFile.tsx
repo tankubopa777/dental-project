@@ -31,21 +31,17 @@ const UploadFile = () => {
       const response = await fetch("http://127.0.0.1:8000/api/crop", {
         method: "POST",
         body: formData,
-        // Headers may be needed depending on endpoint requirements
-        // headers: {
-        //   'Content-Type': 'multipart/form-data',
-        // },
       });
 
       if (!response.ok) {
         throw new Error(`Server responded with ${response.status}`);
       }
 
-      const responseData = await response.json(); // Here you get the response data
-      console.log(responseData); // Log it or set state as needed
-      // If the response contains a URL to a processed image, you can set it for preview
-      if (responseData.url) {
-        setPreviewUrl(responseData.url);
+      const responseData = await response.json();
+      if (responseData.crop_img) {
+        // Assuming `responseData.crop_img` is the base64 string of the cropped image
+        // Convert base64 string to an image and set it for preview
+        setPreviewUrl(`data:image/jpeg;base64,${responseData.crop_img}`);
       }
     } catch (error) {
       console.error("Error during file upload:", error);
