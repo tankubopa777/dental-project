@@ -79,8 +79,8 @@ const UploadFile = () => {
               style={{
                 width: "auto",
                 height: "auto",
-                maxWidth: "100%",
-                maxHeight: "100%",
+                maxWidth: "500px",
+                maxHeight: "500px",
               }}
             />
           ) : (
