@@ -7,11 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     // Full screen background
-    <div className="bg-gradient-background h-screen">
-      {/* make center uploadfile  */}
-      <div className="flex flex-row justify-center items-center">
-        <UploadFile />
-      </div>
+    <div className="bg-gradient-background h-screen flex items-center justify-center">
+      <UploadFile />
     </div>
   );
 }
