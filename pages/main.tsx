@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import { motion } from "framer-motion";
-import { fadeIn } from "@/variants";
-import Transition from "@/components/Transitions";
+import Image from 'next/image';
+import Link from 'next/link';
+import Navbar from '@/components/Navbar';
+import { motion } from 'framer-motion';
+import { fadeIn } from '@/variants';
+import Transition from '@/components/Transitions';
 
 // import HoverCard from "@/components/HoverCard";
 // import Modal from "@/components/Modal";
@@ -13,30 +13,32 @@ import Transition from "@/components/Transitions";
 export default function Home() {
   return (
     // Full screen background
-    <div className="bg-gradient-background h-full ">
+    <div className="h-full bg-gradient-background ">
       <Transition />
       {/* Navbar  */}
       <div>
         <Navbar />
       </div>
       <div className=" lg:grid lg:grid-cols-2">
-        <div className=" flex flex-col ml-20">
+        <div className=" ml-20 flex flex-col">
           <motion.h1
-          variants={fadeIn("right", 0.5)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          className="text-white text-5xl font-normal leading-normal ">
+            variants={fadeIn('right', 0.5)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="text-5xl font-normal leading-normal text-white "
+          >
             Convolution  Neural Network for Dental Caries Classification
           </motion.h1>
 
-          <motion.div 
-          variants={fadeIn("right", 0.5)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          className="">
-            <div className="text-white text-xl font-normal leading-normal">
+          <motion.div
+            variants={fadeIn('right', 0.5)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className=""
+          >
+            <div className="text-xl font-normal leading-normal text-white">
               Convolutional Neural Network (CNN) technology designed to
               revolutionize the way dental caries (tooth decay) is detected and
               classified. Our system is engineered to provide rapid, accurate,
@@ -45,18 +47,18 @@ export default function Home() {
               make the best-informed decisions for your dental treatments.
             </div>
 
-            <div className=" flex flex-row space-x-10 justify-center mt-5">
+            <div className=" mt-5 flex flex-row justify-center space-x-10">
               <Link href="/predict/predict1">
-                <button className="bg-white w-[300px] h-[51px] rounded-full shadow-white shadow-sm ">
-                  <div className="text-black text-custom font-bold leading-normal text-shadow">
+                <button className="h-[51px] w-[300px] rounded-full bg-white shadow-sm shadow-white ">
+                  <div className="text-custom text-shadow font-bold leading-normal text-black">
                     START PREDICT
                   </div>
                 </button>
               </Link>
 
               <Link href="/tutorial/tutorial1">
-                <button className="bg-white w-[300px] h-[51px] rounded-full shadow-white shadow-sm">
-                  <div className="text-black text-custom font-bold leading-normal text-shadow">
+                <button className="h-[51px] w-[300px] rounded-full bg-white shadow-sm shadow-white">
+                  <div className="text-custom text-shadow font-bold leading-normal text-black">
                     TUTORIAL
                   </div>
                 </button>
@@ -67,83 +69,83 @@ export default function Home() {
 
         <div className="flex items-center justify-center">
           <Image
-            className=" rounded-2xl items-center justify-center hidden lg:flex "
+            className=" hidden items-center justify-center rounded-2xl lg:flex "
             src="/image/dentistDoJob.png"
             alt="Picture of the author"
             width={500}
             height={500}
-
           />
         </div>
       </div>
       <div className=" grid-cols-10 ">
-      <motion.div
-      variants={fadeIn("up", 0.5)}
-      initial="hidden"
-      animate="show"
-      exit="hidden"
-      className=" col-span-9 md:grid md:grid-cols-2 xl:flex xl:flex-rows space-x-28 justify-center mt-10 ml-20 mr-20 ">
-        {/* box1 */}
-        <div className="bg-white w-[350px] h-[280px] rounded-3xl shadow-white shadow-lg bg-opacity-70 mb-10">
-          <h1 className="text-black text-2xl text-center mt-5 opacity-100">
-            Privacy-Centric
-          </h1>
-          <p className="text-black text-base font-light leading-normal text-shadow m-5">
-            Your privacy is paramount. All uploads are handled with the highest
-            level of security and confidentiality.
-          </p>
-          <div className="flex justify-center items-center">
-            <Image
-              className=" rounded-2xl items-center justify-center"
-              src="/image/cyberImage.png"
-              alt="Picture of the author"
-              width={130}
-              height={130}
-            />
+        <motion.div
+          variants={fadeIn('up', 0.5)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className=" xl:flex-rows col-span-9 ml-20 mr-20 mt-10 justify-center space-x-28 md:grid md:grid-cols-2 xl:flex "
+        >
+          {/* box1 */}
+          <div className="mb-10 h-[280px] w-[350px] rounded-3xl bg-white bg-opacity-70 shadow-lg shadow-white">
+            <h1 className="mt-5 text-center text-2xl text-black opacity-100">
+              Privacy-Centric
+            </h1>
+            <p className="text-shadow m-5 text-base font-light leading-normal text-black">
+              Your privacy is paramount. All uploads are handled with the
+              highest level of security and confidentiality.
+            </p>
+            <div className="flex items-center justify-center">
+              <Image
+                className=" items-center justify-center rounded-2xl"
+                src="/image/cyberImage.png"
+                alt="Picture of the author"
+                width={130}
+                height={130}
+              />
+            </div>
           </div>
-        </div>
-        {/* box2 */}
-        <div className="bg-white w-[350px] h-[280px] rounded-3xl shadow-white shadow-lg bg-opacity-70">
-          <h1 className="text-black text-2xl text-center mt-5">
-            Easy Accessibility
-          </h1>
-          <p className="text-black text-base font-light leading-normal text-shadow m-5">
-            Access our services from anywhere, anytime, with just an internet
-            connection.
-          </p>
-          <div className="flex justify-center items-center">
-            <Image
-              className=" rounded-2xl items-center justify-center mt-5"
-              src="/image/easyUse.png"
-              alt="Picture of the author"
-              width={90}
-              height={90}
-            />
+          {/* box2 */}
+          <div className="h-[280px] w-[350px] rounded-3xl bg-white bg-opacity-70 shadow-lg shadow-white">
+            <h1 className="mt-5 text-center text-2xl text-black">
+              Easy Accessibility
+            </h1>
+            <p className="text-shadow m-5 text-base font-light leading-normal text-black">
+              Access our services from anywhere, anytime, with just an internet
+              connection.
+            </p>
+            <div className="flex items-center justify-center">
+              <Image
+                className=" mt-5 items-center justify-center rounded-2xl"
+                src="/image/easyUse.png"
+                alt="Picture of the author"
+                width={90}
+                height={90}
+              />
+            </div>
           </div>
-        </div>
-        {/* box3 */}
-        <div className="bg-white w-[350px] h-[280px] rounded-3xl shadow-white shadow-lg bg-opacity-70">
-          <h1 className="text-black text-2xl text-center mt-5">
-            Support for Dental 
-          </h1>
-          <p className="text-black text-base font-light leading-normal text-shadow mt-5 ml-5 mr-5 mb-7">
-            This website can serve as an adjunct tool for dentists, aiding in
-            their diagnostic processes and ensuring a comprehensive approach to
-            oral health care.
-          </p>
-          <div className="flex justify-center items-center">
-            <Image
-              className=" rounded-2xl items-center justify-center -mt-6"
-              src="/image/dentistImage.png"
-              alt="Picture of the author"
-              width={90}
-              height={90}
-            />
+          {/* box3 */}
+          <div className="h-[280px] w-[350px] rounded-3xl bg-white bg-opacity-70 shadow-lg shadow-white">
+            <h1 className="mt-5 text-center text-2xl text-black">
+              Support for Dental
+            </h1>
+            <p className="text-shadow mb-7 ml-5 mr-5 mt-5 text-base font-light leading-normal text-black">
+              This website can serve as an adjunct tool for dentists, aiding in
+              their diagnostic processes and ensuring a comprehensive approach
+              to oral health care.
+            </p>
+            <div className="flex items-center justify-center">
+              <Image
+                className=" -mt-6 items-center justify-center rounded-2xl"
+                src="/image/dentistImage.png"
+                alt="Picture of the author"
+                width={90}
+                height={90}
+              />
+            </div>
           </div>
-        </div>
 
-        <div className=" flex justify-end items-end right-24">
-          <Image
+          <div className=" right-24 flex items-end justify-end">
+            <Image
               className=" "
               src="/image/tooth.png"
               alt="Picture of the author"
@@ -151,7 +153,7 @@ export default function Home() {
               height={150}
             />
           </div>
-          </motion.div>
+        </motion.div>
         {/* <div>
           <HoverCard
             title={"Support for Dental Professionals"}

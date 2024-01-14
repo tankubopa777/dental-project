@@ -29,7 +29,7 @@ export default function Home() {
 
         <div className=" rounded-full shadow-white shadow-sm flex justify-center items-center ">
             <div className=  "bg-slate-300 w-[200px] h-[50px] text-black text-custom rounded-full font-bold leading-normal text-shadow text-center flex justify-center ">
-                <h1 className="h-full flex justify-center items-center">START PREDICT</h1>
+                <h1 className="h-full flex justify-center items-center ">START PREDICT</h1>
             </div>
         </div>
       </div>
