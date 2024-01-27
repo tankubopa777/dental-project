@@ -28,7 +28,7 @@ export default function Home() {
             exit="hidden"
             className="text-5xl font-normal leading-normal text-white "
           >
-            Convolution  Neural Network for Dental Caries Classification
+            Segmentation and numbering bitewing radiograph using YOLOv8
           </motion.h1>
 
           <motion.div
@@ -47,9 +47,9 @@ export default function Home() {
               make the best-informed decisions for your dental treatments.
             </div>
 
-            <div className=" mt-5 flex flex-row justify-center space-x-10">
+            <div className=" mt-5 flex flex-col sm:flex sm:flex-row justify-center space-x-10">
               <Link href="/predict/predict1">
-                <button className="h-[51px] w-[300px] rounded-full bg-white shadow-sm shadow-white ">
+                <button className=" w-[300px] sm:w-[250px] lg:w-[250px] h-[51px] xl:w-[300px] rounded-full bg-white shadow-sm shadow-white ">
                   <div className="text-custom text-shadow font-bold leading-normal text-black">
                     START PREDICT
                   </div>
@@ -57,7 +57,7 @@ export default function Home() {
               </Link>
 
               <Link href="/tutorial/tutorial1">
-                <button className="h-[51px] w-[300px] rounded-full bg-white shadow-sm shadow-white">
+                <button className=" w-[300px] sm:w-[250px] lg:w-[250px] h-[51px] xl:w-[300px] rounded-full bg-white shadow-sm shadow-white">
                   <div className="text-custom text-shadow font-bold leading-normal text-black">
                     TUTORIAL
                   </div>
@@ -83,10 +83,10 @@ export default function Home() {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className=" xl:flex-rows col-span-9 ml-20 mr-20 mt-10 justify-center space-x-28 md:grid md:grid-cols-2 xl:flex "
+          className=" xl:flex-rows col-span-9 ml-20 mr-20 mt-10  justify-center space-x-28 md:grid md:grid-cols-2 xl:flex "
         >
           {/* box1 */}
-          <div className="mb-10 h-[280px] w-[350px] rounded-3xl bg-white bg-opacity-70 shadow-lg shadow-white">
+          <div className="mr-20  mb-10 h-[280px] w-[350px] rounded-3xl bg-white bg-opacity-70 shadow-lg shadow-white">
             <h1 className="mt-5 text-center text-2xl text-black opacity-100">
               Privacy-Centric
             </h1>
